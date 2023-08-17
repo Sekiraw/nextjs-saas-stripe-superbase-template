@@ -35,13 +35,38 @@ export default async function Navbar() {
             </nav>
           </div>
           <div className="flex justify-end flex-1 space-x-8">
-            {user ? (
-              <SignOutButton />
-            ) : (
-              <Link href="/signin" className={s.link}>
-                Sign in
-              </Link>
-            )}
+            <div className="flex items-center space-x-4">
+              {user ? (
+                <SignOutButton />
+              ) : (
+                <>
+                  <Link
+                    href="/signin"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    Sign in
+                  </Link>
+                  {/* <Link
+                    href="/signup"
+                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '2px solid #999',
+                        borderRadius: '4px',
+                        padding: '8px',
+                      }}
+                    >
+                      Sign up
+                    </div>
+
+                  </Link> */}
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>

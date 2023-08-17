@@ -103,9 +103,7 @@ export default async function Account() {
                 variant="slim"
                 type="submit"
                 form="nameForm"
-                disabled={true}
               >
-                {/* WARNING - In Next.js 13.4.x server actions are in alpha and should not be used in production code! */}
                 Update Name
               </Button>
             </div>
@@ -124,7 +122,7 @@ export default async function Account() {
             </form>
           </div>
         </Card>
-        <Card
+        {/* <Card
           title="Your Email"
           description="Please enter the email address you want to use to login."
           footer={
@@ -136,9 +134,7 @@ export default async function Account() {
                 variant="slim"
                 type="submit"
                 form="emailForm"
-                disabled={true}
               >
-                {/* WARNING - In Next.js 13.4.x server actions are in alpha and should not be used in production code! */}
                 Update Email
               </Button>
             </div>
@@ -156,7 +152,7 @@ export default async function Account() {
               />
             </form>
           </div>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );
